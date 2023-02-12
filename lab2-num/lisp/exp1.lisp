@@ -1,5 +1,6 @@
 ; define function exp1
 ; in Java it would be: static float exp1(float a, float b){ return ...; }
+;test comment for commit
 (defun exp1 (a b)
     (+ 
      1 (*
