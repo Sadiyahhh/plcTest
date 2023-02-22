@@ -26,13 +26,15 @@ data Item
         {
             item_length_secs :: Float
         }
-
+--task 4.3a
     deriving (Eq)
 
 instance (Show Item) where
     show (Piece name performer len) =
         printf "%s by %s (%.1fs)" name (show performer) len
-
+    show (Pause secs) = 
+        printf "Pause (%.1fs)" secs
+        
 piece1 =
     Piece
     { 
