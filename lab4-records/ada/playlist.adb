@@ -14,7 +14,7 @@ procedure PlayList is
         Put (To_String (p.name));
     end Put_Person;
 
-    type Item is record
+    type Item (piece1 : pause1) is record
         name        : Unbounded_String;
         performer   : Person;
         length_secs : Float;
@@ -36,15 +36,15 @@ procedure PlayList is
         length_secs => 17.0*60.0+26.0
        );
 
-    -- pause1 : Item :=
-    --    (
-    --     item_variant => PAUSE,
-    --     length_secs => 5.0
-    --    );
+    pause1 : Item :=
+       (
+        item_variant => PAUSE,
+        length_secs => 5.0
+       );
 
 begin
     Put_Item (piece1);
     Put_Line ("");
-    -- Put_Item(pause1);
-    -- Put_Line ("");
+    Put_Item(pause1);
+    Put_Line ("");
 end PlayList;
