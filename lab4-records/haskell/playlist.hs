@@ -33,8 +33,8 @@ instance (Show Item) where
     show (Piece name performer len) =
         printf "%s by %s (%.1fs)" name (show performer) len
     show (Pause secs) = 
-        printf "Pause (%.1fs)" secs
-        
+        printf "Pause (%.1fs)" secs  --task 4.3b
+
 piece1 =
     Piece
     { 
